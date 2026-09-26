@@ -1,0 +1,134 @@
+presentation-vehicule {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Liste des cartes */
+.vehicules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Carte individuel d'un véhicule */
+.vehicule-card {
+  display: flex;
+  background-color: #111111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.vehicule-card:hover {
+  transform: translateY(-4px);
+  border-color: #c9a227;
+}
+
+/* Image du véhicule */
+.vehicule-img-box {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.vehicule-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Informations & caractéristiques */
+.vehicule-details {
+  flex: 1.2;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vehicule-details h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.vehicule-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  color: #cccccc;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.vehicule-specs li strong {
+  color: #c9a227;
+}
+
+/* Alignement Prix + Bouton */
+.vehicule-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid #222;
+}
+
+.vehicule-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Bouton Doré */
+.btn-buy {
+  background-color: #c9a227;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-buy:hover {
+  background-color: #e5b82e;
+  transform: scale(1.03);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .vehicule-card {
+    flex-direction: column;
+  }
+
+  .vehicule-img-box {
+    max-width: 100%;
+  }
+
+  .vehicule-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .btn-buy {
+    width: 100%;
+    text-align: center;
+  }
+}
